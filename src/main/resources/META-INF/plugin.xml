@@ -1,0 +1,29 @@
+<idea-plugin>
+    <id>ddgpluginid</id>
+    <name>DuckDuck search</name>
+    <vendor email="aitorvs@gmail.com" url="https://aitorvs.github.io/">DuckDuckGo</vendor>
+
+    <description><![CDATA[
+    <p>DuckDuckGo is the search engine you should use.</p>
+    <br/>
+    <p>The DuckDuckGo plugin allows to to select text in the IDE and perform a search in DuckDuckGo</p>
+    ]]></description>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <group id="ddggroup" text="DuckDuckGo" description="Duck it">
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+            <add-to-group group-id="ConsoleView.PopupMenu" anchor="first"/>
+            <add-to-group group-id="EditorActions" anchor="first"/>
+            <action id="ddggroup.avs.intellij.DuckDuckGoPlugin" class="ddg.com.DuckItPlugin" text="DuckDuckGo" description="Run DuckDuckGo"/>
+        </group>
+    </actions>
+</idea-plugin>
